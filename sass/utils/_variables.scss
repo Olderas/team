@@ -1,0 +1,27 @@
+$bg-color: white;
+$text-color: black;
+$accent-color: #2196F3;
+$title-text-color: #212121;
+$primari-text-color: #757575;
+$primari-white-color:#FFFFFF;
+$contact-footer: rgba(255, 255, 255, 0.6);
+$hero-bgrcolor: #2F303A;
+$button-filter: #F5F4FA;
+$hover-button: #188ce8;
+$border-box: #EEEEEE;
+$var--bg-icon: #afb1b8;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+:root {
+    --title-text-color: #212121;
+    --primari-text-color: #757575;
+    --primari-white-color: #FFFFFF;
+    --contact-footer: rgba(255, 255, 255, 0.6);
+    --accent-color: #2196F3;
+    --hero-bgrcolor: #2F303A;
+    --button-filter: #F5F4FA;
+    --hover-button: #188ce8;
+    --border-box: #EEEEEE;
+    --var--bg-icon: #afb1b8;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

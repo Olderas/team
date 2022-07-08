@@ -1,0 +1,37 @@
+@mixin centeredFlex( $type: flex) {
+  display: $type;
+  align-items: center;
+  justify-content: center;   
+}
+
+
+@mixin bordered ($color:black, $type: solid) {
+    border-top: 1px $type, $color;
+    border-bottom: 1px $type, $color;
+}
+
+
+// Одинаковые свойства но разные значения ! ! !
+// ПРИМЕР
+// @include centeredFlex (flex);
+
+// @include centeredFlex (inline-flex);
+
+
+
+// URL КАК ПРАВИЛЬНО ИКОНКИ ОФОРМЛЯТЬ ЧЕРЕЗ CSS
+$socialIcons: "Facebook", "instagram", "linkedin", "twitter";
+
+@mixin generateIcons($socialIcons) {
+  @each $iconName in $socialIcons {
+
+    .icon-#{iconName} {
+      background-image: url("../images/#{iconName}.svg")
+    }
+
+  }
+}
+
+@include generateIcons($socialIcons);
+
+ 

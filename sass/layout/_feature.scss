@@ -1,0 +1,40 @@
+.feature-list {
+    display: flex;
+
+}
+
+.feature-list .flex-feature+.flex-feature {
+    margin-left: 30px;
+}
+
+.container-feature {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+background: #F5F4FA;
+border-radius: 4px;
+width: 270px;
+height: 120px;
+margin-bottom: 30px;
+}
+
+.feature__title {
+font-family: 'Roboto';
+color: var(--title-text-color);
+margin-top: 0;
+margin-bottom: 10px;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.2;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+}
+
+.feature__text {
+font-family: 'Roboto';
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: #757575;
+}
+

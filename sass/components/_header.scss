@@ -1,0 +1,58 @@
+.list-best {
+    background-color: red;
+
+    &:nth-child(5) {
+        background-color: $bg-color;
+        color: red;
+    }
+}
+
+.list-best1 {
+    background-color: $text-color;
+    color: $bg-color;
+    width: 350px;
+
+    &:hover {
+        color: $bg-color;
+    }
+
+}
+
+#portfolio {
+    color: var(--accent-color);
+}
+
+
+.hello {
+    color: black;
+
+    &:hover {
+        color: red;
+    }
+}
+
+
+.header {
+    border-bottom: 1px solid var(--border-box);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.container.headers {
+    display: flex;
+
+    position: relative;
+    /* position: fixed;
+        width: 100%;
+        z-index: 2;
+        top: 0;
+        left: auto;
+        right: auto;
+        min-height: 80px;
+        background-color: white; */
+    align-items: center;
+
+} 
+ 
