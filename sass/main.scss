@@ -1,26 +1,18 @@
 @import "./utils/variables";
-@import "./utils/visuallyhidden";
-@import "./utils/normalize";
-@import "./utils/placeholders";
+@import "./base/reset";
+@import "./utils/hidden";
 @import "./utils/mixins";
-@import "./base/comon";
-@import "./base/resetstyles";
-@import "./components/section";
+
 @import "./components/container";
+@import "./components/btn";
 @import "./components/logo";
-@import "./components/socialList";
-@import "./components/navigation";
-@import "./components/contant";
-@import "./components/button";
 @import "./components/modal";
-@import "./components/header";
-@import "./components/footer";
-@import "./layout/feature";
+
+@import "./layout/header";
 @import "./layout/hero";
-@import "./layout/work";
+@import "./layout/features";
+@import "./layout/works";
 @import "./layout/team";
-@import "./layout/client";
-@import "./layout/filter";
-
-
-
+@import "./layout/clients";
+@import "./layout/footer";
+@import "./layout/projects";
