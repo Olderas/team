@@ -1,0 +1,28 @@
+$mobile: 480px;
+
+$tablet: 748px;
+
+$desktop: 1140px;
+
+
+
+// Такой медиа-запрос віполнится только если веб-страница открыта на экране а ширина вьюпорта находится в диапозоне от 400px до 800px
+// @media screen and (min-width:400px) and (max-width:800px) {
+//     background-color: red;
+// }
+
+
+
+// Например необходимо применять стили в промежутке до 600px или после 900px
+// @media (max-width: 600px), (min-width: 900px) {
+//  background-color: orange;
+// }
+
+// Єто можно записать как два разных медиа-запроса.Но тогда код стилей будет дублироваться
+// @media (max-width: 600px),{
+//     background-color: orange;
+// }
+
+// @media (min-width: 900px) {
+//     background-color: orange;
+// }

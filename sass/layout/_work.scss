@@ -4,13 +4,13 @@
 }
 
 .work__list {
-    display: flex;
+    // display: flex;
 
-    flex-wrap: wrap;
+
 }
 
 .work__item + .work__item{
-margin-left: 30px;
+// margin-left: 30px;
 }
 
 .work__item {
@@ -18,7 +18,10 @@ position: relative;
 justify-content: center;
 align-items: center;
 width: 370px;
-flex-basis: calc(100% / 4);
+
+
+
+
 }
 
 .work__text{

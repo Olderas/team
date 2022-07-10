@@ -38,19 +38,53 @@ transition: background-color 250ms var(--timing-function), fill 250ms var(--timi
 }
 
 .team__list {
-    display: flex;
+    // display: flex;
     text-align: center;
+    // @media screen and (min-width: 480px) {
+    //         display: block;
+    //         justify-content: center;
+    //         align-items: center;
+    //     }
+
+@media screen and (min-width: 768px) {
+    display: flex;
+    background-color: #ff5722;
+}
 }
 
+
 .team__item {
-    width: 270px;
+    
     box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.14);
     
         background-color: #FFFFFF;
+        //         @media screen and (min-width: 480px) {
+                
+        // }
+
+        @media screen and (min-width: 768px) {
+    flex-basis: 50%;
+}
+
+@media screen and (min-width: 1200px) {
+    flex-basis: 25%;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+.team__img {
+    width: 450px;
+    // height: 460px;
+    // @media screen and (min-width: 480px) {
+    //     width: 100%;
+    // }
+
+
 }
 
 .section--team .team__item+.team__item {
-    margin-left: 30px;
+    // margin-left: 30px;
 
 }
 
