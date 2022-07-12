@@ -1242,13 +1242,22 @@ textarea {
   border-color: #2196F3;
 }
 
-@media screen and (min-width: 768px) {
+.feature-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+@media screen and (max-width: 1199px) {
   .feature-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    gap: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1256,31 +1265,20 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: red;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .flex-feature .flex-feature:nth-of-type(-n+2) {
-    margin-bottom: 30px;
+  .flex-feature {
+    width: calc((100% - 30px) / 2);
   }
 }
-@media screen and (min-width: 768px) {
-  .flex-feature .flex-feature:nth-of-type(2n) {
-    margin-left: 30px;
+@media screen and (min-width: 1200px) {
+  .flex-feature {
+    width: calc((100% - 90px) / 4);
   }
 }
 
-@media screen and (min-width: 768px) {
-  .flex-feature:nth-of-type(-n+2) {
-    margin-bottom: 30px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .flex-feature:nth-of-type(2n) {
-    margin-left: 30px;
-  }
-}
 .container-feature {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1297,14 +1295,19 @@ textarea {
   height: 120px;
   margin-bottom: 30px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (min-width: 480px) {
   .container-feature {
     width: 450px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) and (min-width: 768px) {
   .container-feature {
     width: 354px;
+  }
+}
+@media screen and (min-width: 480px) and (min-width: 768px) {
+  .container-feature {
+    width: 270px;
   }
 }
 
@@ -1318,6 +1321,11 @@ textarea {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .feature__title {
+    text-align: center;
+  }
 }
 
 .feature__text {
@@ -1361,6 +1369,21 @@ textarea {
 
 .section.work {
   padding-top: 0;
+}
+@media screen and (max-width: 1199px) {
+  .section.work {
+    display: none;
+  }
+}
+
+.work__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.work__item + .work__item {
+  margin-left: 30px;
 }
 
 .work__item {
@@ -1447,14 +1470,25 @@ textarea {
 }
 
 .team__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
+  gap: 30px;
 }
 @media screen and (min-width: 768px) {
   .team__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #ff5722;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -1465,23 +1499,9 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   .team__item {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    width: calc((100% - 30px) / 2);
   }
 }
-@media screen and (min-width: 1200px) {
-  .team__item {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 .team__img {
   width: 450px;
 }
@@ -1510,9 +1530,23 @@ textarea {
   margin-bottom: 16px;
 }
 
+.client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
 .client__item {
   width: 170px;
   height: 92px;
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .client__item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .client__links {
@@ -1525,7 +1559,6 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 170px;
   height: 92px;
   fill: var(--var--bg-icon);
   border: 1px solid var(--var--bg-icon);
@@ -1539,34 +1572,6 @@ textarea {
 .client__links:hover {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
-}
-
-.client {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-  padding-left: 0px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: -15px;
-  margin-left: -15px;
-}
-
-.client__item {
-  margin-top: 15px;
-  margin-left: 15px;
-}
-
-.client > .client__item {
-  -ms-flex-preferred-size: calc(16.6666666667% - 15px);
-      flex-basis: calc(16.6666666667% - 15px);
 }
 
 .filter {

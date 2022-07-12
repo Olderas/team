@@ -38,8 +38,15 @@ transition: background-color 250ms var(--timing-function), fill 250ms var(--timi
 }
 
 .team__list {
+        list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            gap: 30px;
     // display: flex;
-    text-align: center;
+    // text-align: center;
+
     // @media screen and (min-width: 480px) {
     //         display: block;
     //         justify-content: center;
@@ -48,7 +55,9 @@ transition: background-color 250ms var(--timing-function), fill 250ms var(--timi
 
 @media screen and (min-width: 768px) {
     display: flex;
-    background-color: #ff5722;
+    flex-wrap: wrap;
+    // background-color: #ff5722;
+    // margin: -5px;
 }
 }
 
@@ -63,14 +72,18 @@ transition: background-color 250ms var(--timing-function), fill 250ms var(--timi
         // }
 
         @media screen and (min-width: 768px) {
-    flex-basis: 50%;
+
+        width: calc((100% - 2 * 15px) / 2);
+    
+
+
+    // margin: 5px;
 }
 
-@media screen and (min-width: 1200px) {
-    flex-basis: 25%;
-    justify-content: center;
-    align-items: center;
+        @media screen and (max-width: 767px) {
+// margin-bottom: 30px;
 }
+
 }
 
 .team__img {
