@@ -1,0 +1,46 @@
+.contact {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+    margin-left: auto;
+
+}
+
+.contact .item {
+    padding: 32px 0px;
+    margin: 0;
+
+}
+
+
+.contact .contact__list+.contact__list {
+    margin-left: 30px;
+}
+
+a.contact__link:hover,
+.contact__link:focus {
+    color: #188ce8;
+    fill: #188ce8;
+
+}
+
+.contact__link {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto';
+    fill: currentColor;
+    color: currentColor;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    transition: color 250ms var(--timing-function),
+        fill 250ms var(--timing-function);
+
+}
+
+.contact__icon-massage {
+    margin-right: 10px;
+    /* fill: currentColor; */
+}
