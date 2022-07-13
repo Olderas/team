@@ -555,6 +555,11 @@ h2 {
   display: block;
 }
 
+.mobile-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .contact .item {
   padding: 32px 0px;
   margin: 0;
@@ -1105,15 +1110,31 @@ textarea {
           align-items: baseline;
   text-align: center;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .container-footer {
-    width: 480px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 .footer-address {
   text-align: center;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .footer-address {
+    min-width: 232px;
+    margin-bottom: 60px;
+  }
 }
 
 .footer {
@@ -1165,6 +1186,22 @@ textarea {
 .socials-footer {
   text-align: center;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .socials-footer {
+    min-width: 206px;
+    margin-left: 165px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .socials-footer {
+    margin-bottom: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .socials-footer {
+    margin-left: 70px;
+  }
 }
 
 .footer-title {
@@ -1219,16 +1256,29 @@ textarea {
   fill: white;
 }
 
-.sign {
-  margin-left: auto;
+@media screen and (min-width: 768px) {
+  .sign {
+    display: block;
+    width: 570px;
+    height: 86px;
+    margin-left: 93px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sign {
+    margin-left: auto;
+  }
 }
 
 .form-footer {
   text-align: center;
 }
-
-.footer-label {
-  margin-right: 12px;
+@media screen and (min-width: 1200px) {
+  .form-footer {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
 }
 
 .footer-label input::-webkit-input-placeholder {
@@ -1302,6 +1352,17 @@ textarea {
   outline: none;
   -webkit-transition: border-color 250ms var(--timing-function);
   transition: border-color 250ms var(--timing-function);
+}
+@media screen and (max-width: 1199px) {
+  .footer-input {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-input {
+    padding-left: 16px;
+    width: 358px;
+  }
 }
 
 .footer-input:focus,
@@ -1623,19 +1684,30 @@ textarea {
 }
 
 .filter {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
-  padding-left: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  row-gap: 15px;
 }
-
-.filter .filter__item + .filter__item {
-  margin-left: 8px;
+@media screen and (min-width: 768px) {
+  .filter {
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__button {
@@ -1673,25 +1745,25 @@ textarea {
       flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-right: -30px;
-  margin-bottom: -30px;
-}
-
-.project-list .project-list__item {
-  -ms-flex-preferred-size: calc(33.3333333333% - 30px);
-      flex-basis: calc(33.3333333333% - 30px);
+  gap: 30px;
 }
 
 .project-list__item {
-  margin-right: 30px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .project-list__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-list__item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
-.project-list__item:nth-child(-n+6) {
-  margin-bottom: 30px;
-}
-
-.project-list__item:nth-child(3n) {
-  margin-right: 0;
+.project-icon {
+  width: 100%;
 }
 
 .project-list__link {
@@ -1785,13 +1857,6 @@ textarea {
   border-right: 1px solid var(--border-box);
   border-bottom: 1px solid var(--border-box);
   border-left: 1px solid var(--border-box);
-  width: 370px;
-}
-
-.project-list__title {
-  margin: 0;
-  margin-bottom: 4px;
-  margin-right: auto;
 }
 
 .project-list .project-list__title {
@@ -1800,9 +1865,10 @@ textarea {
   font-weight: 700;
   font-size: 18px;
   margin-left: auto;
+  margin-bottom: 4px;
   text-align: left;
   line-height: 2;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
 }
 
 .project-list .project-list__text {
