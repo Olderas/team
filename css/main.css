@@ -478,25 +478,37 @@ h2 {
 }
 
 .contact {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 0;
-  margin-left: auto;
+  margin-left: 84px;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 58px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+  }
 }
 
 .contact .item {
   padding: 32px 0px;
   margin: 0;
-}
-
-.contact .contact__list + .contact__list {
-  margin-left: 30px;
 }
 
 a.contact__link:hover,
@@ -515,8 +527,6 @@ a.contact__link:hover,
   font-family: "Roboto";
   fill: currentColor;
   color: currentColor;
-  padding-top: 32px;
-  padding-bottom: 32px;
   -webkit-transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
   transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
@@ -1052,6 +1062,11 @@ textarea {
   }
 }
 
+.footer-address {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .footer {
   background-color: var(--hero-bgrcolor);
 }
@@ -1099,7 +1114,8 @@ textarea {
 }
 
 .socials-footer {
-  margin-left: 70px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .footer-title {
@@ -1118,6 +1134,9 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -1156,9 +1175,7 @@ textarea {
 }
 
 .form-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  text-align: center;
 }
 
 .footer-label {
@@ -1229,6 +1246,7 @@ textarea {
   border-radius: 4px;
   width: 358px;
   height: 50px;
+  margin-bottom: 20px;
   padding-left: 16px;
   color: white;
   background: transparent;
@@ -1291,21 +1309,20 @@ textarea {
           justify-content: center;
   background: #F5F4FA;
   border-radius: 4px;
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
 }
-@media screen and (min-width: 480px) and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .container-feature {
     width: 450px;
   }
 }
-@media screen and (min-width: 480px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .container-feature {
     width: 354px;
   }
 }
-@media screen and (min-width: 480px) and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .container-feature {
     width: 270px;
   }
@@ -1354,17 +1371,24 @@ textarea {
 
 .hero__title {
   font-family: "Roboto";
-  color: var(--primari-white-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  color: var(--primari-white-color);
   letter-spacing: 0.06em;
   text-align: center;
+  font-size: 26px;
+  line-height: 1.62;
   text-transform: uppercase;
-  width: 696px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.62;
+    width: 360px;
+  }
 }
 
 .section.work {
@@ -1502,8 +1526,16 @@ textarea {
     width: calc((100% - 30px) / 2);
   }
 }
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .team__item {
+    width: calc((100% - 90px) / 4);
+  }
+}
 .team__img {
-  width: 450px;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
 }
 
 .team__staff {
@@ -1540,12 +1572,17 @@ textarea {
 }
 
 .client__item {
-  width: 170px;
+  width: calc((100% - 30px) / 2);
   height: 92px;
 }
-@media screen and (min-width: 768px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .client__item {
     width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__item {
+    width: calc((100% - 150px) / 6);
   }
 }
 
@@ -1559,7 +1596,8 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 92px;
+  width: 100%;
+  height: 100%;
   fill: var(--var--bg-icon);
   border: 1px solid var(--var--bg-icon);
   border-radius: 3px;
