@@ -1087,21 +1087,38 @@ textarea {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .container-footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .container-footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
@@ -1166,15 +1183,15 @@ textarea {
   text-align: center;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 767px) {
+  .socials-footer {
+    margin-bottom: 60px;
+  }
+}
 @media screen and (min-width: 768px) {
   .socials-footer {
     min-width: 206px;
     margin-left: 165px;
-  }
-}
-@media screen and (max-width: 1199px) {
-  .socials-footer {
-    margin-bottom: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1193,6 +1210,11 @@ textarea {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+@media screen and (max-width: 1199px) {
+  .footer-title {
+    text-align: center;
+  }
 }
 
 .socials-footer__list {
@@ -1237,14 +1259,12 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .sign {
-    display: block;
-    width: 570px;
-    height: 86px;
-    margin-left: 93px;
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
   .sign {
+    min-width: 570px;
     margin-left: auto;
   }
 }
@@ -1257,6 +1277,13 @@ textarea {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-label {
+    margin-right: 12px;
   }
 }
 
@@ -1339,7 +1366,6 @@ textarea {
 }
 @media screen and (min-width: 1200px) {
   .footer-input {
-    padding-left: 16px;
     width: 358px;
   }
 }
